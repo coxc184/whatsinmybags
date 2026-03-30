@@ -1,0 +1,105 @@
+
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/the-infamous-middle-finger-ed11cdae-32.webp') 43 43, auto !important;
+}
+
+
+.vt323-regular {
+font-family: "VT323", monospace;
+font-weight: 400;
+font-style: normal;
+}
+
+
+body {
+font-family: 'VT323', monospace;
+background-color: #000000;
+color: #ffffff;
+margin: 0;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center; 
+padding: 20px;
+}
+
+
+button.imageButton {
+border: none;
+background: none;
+padding: 0;
+cursor: pointer;
+}
+
+
+button.imageButton img {
+display: block;
+height: auto;
+image-rendering: optimizeQuality;
+}
+
+
+.centered-container {
+width: 100%;
+display: flex;
+justify-content: center; 
+padding-left: 40px; 
+margin-bottom: 40px;
+}
+
+.centered-container img {
+width: 150px;
+transition:
+transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+filter 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.centered-container img:hover {
+transform: translateY(-4px);
+filter: drop-shadow(0 14px 20px rgba(255, 44, 213, 0.6));
+}
+
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping if not enough space */
+  gap: 20px;
+  justify-content: center; /* centers the row */
+  max-width: 100%; /* increase width to fit more items */
+}
+
+.grid-container img {
+width: 200px;
+transition:
+transform 0.3s ease,
+filter 0.3s ease;
+}
+
+.grid-container img:hover {
+transform: translateY(-4px);
+filter: drop-shadow(0 10px 15px rgba(255, 44, 213, 0.6));
+}
+
+
+.dialogueBox {
+position: absolute;
+opacity: 0;
+transition: opacity 0.3s ease;
+background: rgba(0, 0, 0, 0.85);
+color: #ffffff;
+padding: 12px 16px;
+border-radius: 8px;
+font-family: "VT323", monospace;
+pointer-events: none;
+transform: translate(-50%, -120%);
+white-space: normal;       
+  max-width: 220px;          
+  word-wrap: break-word;     
+  line-height: 1.4em;        
+}
+
+.dialogueBox.show {
+opacity: 1;
+pointer-events: auto;
+}
+
